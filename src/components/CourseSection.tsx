@@ -12,8 +12,8 @@ const CourseSection = () => {
     {
       id: 1,
       title: "Full Stack Web Development",
-      description: "Master both frontend and backend development with React, Node.js, and MongoDB.",
-      imageUrl: "https://placehold.co/600x400/1598F2/FFFFFF?text=Web+Development",
+      description: "Master frontend and backend technologies to build complete web applications from scratch.",
+      imageUrl: "https://placehold.co/600x400/1598F2/FFFFFF?text=Full+Stack",
       category: "web",
       duration: "12 weeks",
       startDate: "Jan 15, 2024",
@@ -24,7 +24,7 @@ const CourseSection = () => {
     {
       id: 2,
       title: "iOS App Development",
-      description: "Build native iOS applications using Swift and the latest Apple frameworks.",
+      description: "Learn Swift and iOS frameworks to build professional, App Store-ready applications.",
       imageUrl: "https://placehold.co/600x400/FEB727/FFFFFF?text=iOS+Development",
       category: "mobile",
       duration: "10 weeks",
@@ -36,7 +36,7 @@ const CourseSection = () => {
     {
       id: 3,
       title: "Android App Development",
-      description: "Create native Android apps using Kotlin and modern architecture patterns.",
+      description: "Master Kotlin and Android Studio to create native Android applications with modern architecture.",
       imageUrl: "https://placehold.co/600x400/56A6E1/FFFFFF?text=Android+Development",
       category: "mobile",
       duration: "10 weeks",
@@ -47,8 +47,8 @@ const CourseSection = () => {
     },
     {
       id: 4,
-      title: "React Frontend Mastery",
-      description: "Deep dive into React, Redux, and modern frontend development practices.",
+      title: "Frontend Development with React",
+      description: "Become proficient in React, Redux, and modern frontend development practices and tools.",
       imageUrl: "https://placehold.co/600x400/B04903/FFFFFF?text=React+Development",
       category: "web",
       duration: "8 weeks",
@@ -60,7 +60,7 @@ const CourseSection = () => {
     {
       id: 5,
       title: "Cross-Platform App Development",
-      description: "Build once, deploy everywhere with React Native and Flutter.",
+      description: "Use React Native and Flutter to build mobile apps that work on both iOS and Android.",
       imageUrl: "https://placehold.co/600x400/13247E/FFFFFF?text=Cross+Platform",
       category: "mobile",
       duration: "9 weeks",
@@ -72,8 +72,8 @@ const CourseSection = () => {
     {
       id: 6,
       title: "Backend Development with Node.js",
-      description: "Create scalable backend systems with Node.js, Express, and various databases.",
-      imageUrl: "https://placehold.co/600x400/1598F2/FFFFFF?text=Backend+Development",
+      description: "Build scalable server-side applications with Node.js, Express, and various databases.",
+      imageUrl: "https://placehold.co/600x400/1598F2/FFFFFF?text=Backend+Node.js",
       category: "web",
       duration: "8 weeks",
       startDate: "Feb 12, 2024",
@@ -83,10 +83,10 @@ const CourseSection = () => {
     },
     {
       id: 7,
-      title: "Advanced JavaScript",
-      description: "Deep dive into advanced JavaScript concepts, patterns, and modern ES6+ features.",
-      imageUrl: "https://placehold.co/600x400/FEB727/FFFFFF?text=JavaScript",
-      category: "web",
+      title: "UI/UX Design Fundamentals",
+      description: "Learn essential design principles, user research methods, and prototyping techniques.",
+      imageUrl: "https://placehold.co/600x400/FEB727/FFFFFF?text=UI/UX+Design",
+      category: "design",
       duration: "6 weeks",
       startDate: "Feb 19, 2024",
       studentsCount: 1320,
@@ -95,10 +95,10 @@ const CourseSection = () => {
     },
     {
       id: 8,
-      title: "UI/UX for Developers",
-      description: "Learn design principles and prototyping specifically for developers.",
-      imageUrl: "https://placehold.co/600x400/56A6E1/FFFFFF?text=UI/UX+Design",
-      category: "design",
+      title: "Advanced JavaScript Programming",
+      description: "Deep dive into advanced JavaScript concepts, patterns, and modern ES6+ features.",
+      imageUrl: "https://placehold.co/600x400/56A6E1/FFFFFF?text=JavaScript",
+      category: "web",
       duration: "5 weeks",
       startDate: "Mar 4, 2024",
       studentsCount: 723,
@@ -131,11 +131,11 @@ const CourseSection = () => {
             Discover Our <span className="text-gradient-blue">Premium Courses</span>
           </h2>
           <p className="section-subheading">
-            Comprehensive, hands-on courses designed to take you from beginner to industry-ready professional.
+            Industry-relevant courses designed by experts to help you master the skills employers are looking for.
           </p>
         </div>
 
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-10 overflow-x-auto">
           <div className="inline-flex p-1 bg-gray-100 rounded-lg">
             <button
               className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${

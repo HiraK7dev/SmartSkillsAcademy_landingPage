@@ -22,10 +22,11 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '#' },
+    { label: 'About Us', href: '#about' },
     { label: 'Courses', href: '#courses' },
     { label: 'Features', href: '#features' },
-    { label: 'Instructors', href: '#instructors' },
     { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   const toggleMenu = () => {
@@ -48,7 +49,7 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
           <a href="#" className="text-2xl font-bold text-resolutionBlue">
-            DevCourse<span className="text-celestialBlue">HQ</span>
+            Smart<span className="text-celestialBlue">Skills</span>Academy
           </a>
         </div>
 

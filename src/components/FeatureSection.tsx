@@ -33,43 +33,43 @@ const FeatureSection = () => {
   const features = [
     {
       icon: <Code size={24} className="text-celestialBlue" />,
-      title: "Industry-Relevant Curriculum",
-      description: "Constantly updated curriculum aligned with current industry standards and practices."
+      title: "Real-World Projects",
+      description: "Apply your knowledge to real-world projects that enhance your portfolio and prepare you for industry challenges."
     },
     {
       icon: <UserCheck size={24} className="text-celestialBlue" />,
-      title: "Expert Instructors",
-      description: "Learn from experienced professionals who have worked at top tech companies."
+      title: "Experienced Mentors",
+      description: "Learn from industry experts with years of professional experience at top tech companies."
     },
     {
       icon: <Briefcase size={24} className="text-celestialBlue" />,
-      title: "Project-Based Learning",
-      description: "Build portfolio-ready projects that demonstrate your skills to potential employers."
+      title: "Career Guidance",
+      description: "Receive personalized career advice, resume reviews, and interview preparation to land your dream job."
     },
     {
       icon: <Award size={24} className="text-celestialBlue" />,
-      title: "Certification",
-      description: "Earn recognized certificates upon course completion to boost your resume."
+      title: "Industry Certification",
+      description: "Earn recognized certifications that validate your skills to potential employers."
     },
     {
       icon: <BookOpen size={24} className="text-celestialBlue" />,
       title: "Comprehensive Resources",
-      description: "Access detailed course materials, code samples, and additional learning resources."
+      description: "Access a vast library of learning materials, code samples, and additional resources to support your learning."
     },
     {
       icon: <Video size={24} className="text-celestialBlue" />,
-      title: "On-Demand Video Lessons",
-      description: "Learn at your own pace with high-quality video lessons available 24/7."
+      title: "Interactive Learning",
+      description: "Engage with interactive lessons, coding challenges, and hands-on workshops for practical experience."
     },
     {
       icon: <Users size={24} className="text-celestialBlue" />,
       title: "Community Support",
-      description: "Join our active community of learners for collaboration and networking opportunities."
+      description: "Join our active community of learners for networking, collaboration, and peer-to-peer learning."
     },
     {
       icon: <Globe size={24} className="text-celestialBlue" />,
-      title: "Career Services",
-      description: "Get resume reviews, interview preparation, and job placement assistance."
+      title: "Lifetime Access",
+      description: "Get lifetime access to course materials and free updates as technologies evolve and change."
     }
   ];
 
@@ -84,7 +84,7 @@ const FeatureSection = () => {
             Features That <span className="text-gradient-blue">Set Us Apart</span>
           </h2>
           <p className="section-subheading">
-            Our courses are designed with a focus on practical skills, industry relevance, and student success.
+            Our platform offers unique advantages designed to ensure your success in today's competitive tech landscape.
           </p>
         </div>
 
@@ -107,9 +107,9 @@ const FeatureSection = () => {
         <div className={`mt-20 bg-gradient-to-r from-resolutionBlue to-celestialBlue rounded-2xl overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
             <div className="text-white">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Learning Journey?</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Career?</h3>
               <p className="mb-8 opacity-90">
-                Join thousands of students who have transformed their careers through our expert-led courses. Get started today with our special launch offer.
+                Join thousands of students who have accelerated their careers with our practical, job-focused tech training programs.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -118,7 +118,7 @@ const FeatureSection = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-sm opacity-90">30-day money-back guarantee</p>
+                  <p className="text-sm opacity-90">Flexible learning schedules that fit your lifestyle</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="bg-white/20 rounded-full p-1 mt-0.5">
@@ -126,7 +126,7 @@ const FeatureSection = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-sm opacity-90">Lifetime access to course materials</p>
+                  <p className="text-sm opacity-90">Pay monthly or get a discount with full payment</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="bg-white/20 rounded-full p-1 mt-0.5">
@@ -134,7 +134,7 @@ const FeatureSection = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-sm opacity-90">Regular updates with latest content</p>
+                  <p className="text-sm opacity-90">Job placement assistance for course graduates</p>
                 </div>
               </div>
             </div>
@@ -148,17 +148,17 @@ const FeatureSection = () => {
                 </div>
               </div>
               <div className="mb-6">
-                <div className="text-sm opacity-80 mb-1">Special Launch Offer</div>
+                <div className="text-sm opacity-80 mb-1">Special Offer</div>
                 <div className="flex items-end">
                   <span className="text-4xl font-bold">$999</span>
                   <span className="ml-2 text-sm opacity-70">USD</span>
                 </div>
-                <div className="mt-1 inline-block px-2 py-1 bg-selectiveYellow text-resolutionBlue text-xs font-bold rounded">SAVE 30%</div>
+                <div className="mt-1 inline-block px-2 py-1 bg-selectiveYellow text-resolutionBlue text-xs font-bold rounded">SAVE 33%</div>
               </div>
               <button className="w-full py-3 px-6 bg-white text-resolutionBlue font-bold rounded-lg hover:bg-white/90 transition-colors">
-                Enroll Now with Discount
+                Enroll Now and Save
               </button>
-              <p className="text-xs opacity-70 text-center mt-4">Limited-time offer. No credit card required to start.</p>
+              <p className="text-xs opacity-70 text-center mt-4">Limited time offer. First 100 students only.</p>
             </div>
           </div>
         </div>

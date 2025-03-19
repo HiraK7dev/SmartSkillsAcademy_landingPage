@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
-import { ArrowRight, Code, Smartphone } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Zap } from 'lucide-react';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,7 +26,7 @@ const Hero = () => {
             }`}
           >
             <span className="inline-block px-4 py-1.5 bg-celestialBlue/10 text-celestialBlue rounded-full text-sm font-medium mb-5">
-              Launch Offer: 30% Off All Courses
+              The Future of Tech Skills Learning
             </span>
           </div>
 
@@ -35,8 +35,8 @@ const Hero = () => {
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Master <span className="text-gradient-blue">Web & Mobile</span> Development<br />
-            From Industry Experts
+            Learn <span className="text-gradient-blue">Modern Tech Skills</span><br />
+            For The Digital Age
           </h1>
 
           <p 
@@ -44,7 +44,7 @@ const Hero = () => {
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Launch your tech career with our comprehensive, hands-on courses designed by industry professionals. Build real-world projects and gain the skills employers actually need.
+            Unlock your potential with our comprehensive tech courses. Whether you're a beginner or looking to advance your skills, we have the perfect learning path for you.
           </p>
 
           <div 
@@ -53,10 +53,10 @@ const Hero = () => {
             }`}
           >
             <Button size="lg" className="w-full sm:w-auto">
-              Explore Courses <ArrowRight size={18} className="ml-2" />
+              Start Learning Now <ArrowRight size={18} className="ml-2" />
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto">
-              View Course Catalog
+              Explore Courses
             </Button>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Hero = () => {
                 <Code size={28} className="text-celestialBlue" />
               </div>
               <h3 className="text-xl font-bold mb-2">Web Development</h3>
-              <p className="text-gray-600">Learn frontend, backend, or full stack development with modern frameworks and tools.</p>
+              <p className="text-gray-600">Master modern frameworks and tools to build responsive, dynamic websites and web applications.</p>
             </div>
           </div>
 
@@ -84,7 +84,18 @@ const Hero = () => {
                 <Smartphone size={28} className="text-selectiveYellow" />
               </div>
               <h3 className="text-xl font-bold mb-2">Mobile App Development</h3>
-              <p className="text-gray-600">Create native and cross-platform mobile applications for iOS and Android.</p>
+              <p className="text-gray-600">Learn to build native and cross-platform mobile applications for iOS and Android devices.</p>
+            </div>
+          </div>
+          
+          <div className="bg-white shadow-xl rounded-xl overflow-hidden flex-1 max-w-md transform transition-transform hover:scale-[1.02] duration-500">
+            <div className="h-2 bg-celestialBlue"></div>
+            <div className="p-6">
+              <div className="w-12 h-12 bg-celestialBlue/10 rounded-lg flex items-center justify-center mb-4">
+                <Zap size={28} className="text-celestialBlue" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
+              <p className="text-gray-600">Design beautiful, intuitive interfaces that provide exceptional user experiences.</p>
             </div>
           </div>
         </div>
@@ -94,7 +105,7 @@ const Hero = () => {
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <p className="text-sm text-gray-500 mb-3">TRUSTED BY DEVELOPERS FROM</p>
+          <p className="text-sm text-gray-500 mb-3">TRUSTED BY PROFESSIONALS FROM</p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
             <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Google" alt="Google" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
             <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Microsoft" alt="Microsoft" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
