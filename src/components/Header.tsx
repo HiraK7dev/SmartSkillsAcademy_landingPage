@@ -23,7 +23,9 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '#' },
     { label: 'Courses', href: '#courses' },
-    { label: 'About', href: '#about' },
+    { label: 'Features', href: '#features' },
+    { label: 'Instructors', href: '#instructors' },
+    { label: 'Testimonials', href: '#testimonials' },
   ];
 
   const toggleMenu = () => {
@@ -45,23 +47,19 @@ const Header = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="flex items-center">
-            <img 
-              src="/lovable-uploads/caf03ba0-ea5c-468e-91cb-eec3d332ede5.png" 
-              alt="Smart Skills Logo" 
-              className="h-10 md:h-12" 
-            />
+          <a href="#" className="text-2xl font-bold text-resolutionBlue">
+            DevCourse<span className="text-celestialBlue">HQ</span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-12">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-resolutionBlue hover:text-celestialBlue transition-colors font-medium text-lg"
+                className="text-gray-700 hover:text-celestialBlue transition-colors font-medium"
               >
                 {item.label}
               </a>
@@ -69,19 +67,18 @@ const Header = () => {
           </nav>
         )}
 
-        <div className="hidden md:flex items-center">
-          <Button 
-            variant="primary" 
-            size="md" 
-            className="bg-resolutionBlue hover:bg-resolutionBlue/90 text-white px-8"
-          >
-            Login
+        <div className="hidden md:flex items-center space-x-4">
+          <Button variant="outline" size="sm">
+            Sign In
+          </Button>
+          <Button variant="primary" size="sm">
+            Get Started
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-resolutionBlue"
+          className="md:hidden text-gray-700"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -102,18 +99,15 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xl font-medium text-resolutionBlue hover:text-celestialBlue"
+                className="text-xl font-medium text-gray-800 hover:text-celestialBlue"
                 onClick={closeMenu}
               >
                 {item.label}
               </a>
             ))}
             <div className="flex flex-col space-y-4 pt-6">
-              <Button 
-                className="bg-resolutionBlue hover:bg-resolutionBlue/90 text-white"
-              >
-                Login
-              </Button>
+              <Button variant="outline">Sign In</Button>
+              <Button>Get Started</Button>
             </div>
           </nav>
         </div>

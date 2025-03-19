@@ -22,9 +22,9 @@ const Button = ({
   const baseClasses = "rounded-lg font-medium transition-all duration-300 ease-in-out transform active:scale-[0.98] flex items-center justify-center";
   
   const variantClasses = {
-    primary: "bg-resolutionBlue hover:bg-resolutionBlue/90 text-white shadow-md hover:shadow-lg",
+    primary: "bg-celestialBlue hover:bg-celestialBlue/90 text-white shadow-md hover:shadow-lg",
     secondary: "bg-selectiveYellow hover:bg-selectiveYellow/90 text-resolutionBlue shadow-md hover:shadow-lg",
-    outline: "bg-transparent border-2 border-resolutionBlue text-resolutionBlue hover:bg-resolutionBlue/5"
+    outline: "bg-transparent border-2 border-celestialBlue text-celestialBlue hover:bg-celestialBlue/5"
   };
   
   const sizeClasses = {

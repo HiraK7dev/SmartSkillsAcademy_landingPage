@@ -2,10 +2,11 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import PromiseSection from '../components/PromiseSection';
-import WhyChooseUsSection from '../components/WhyChooseUsSection';
-import AboutSection from '../components/AboutSection';
-import ContactSection from '../components/ContactSection';
+import CourseSection from '../components/CourseSection';
+import FeatureSection from '../components/FeatureSection';
+import InstructorSection from '../components/InstructorSection';
+import TestimonialSection from '../components/TestimonialSection';
+import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -31,14 +32,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
       <main>
         <Hero />
-        <PromiseSection />
-        <WhyChooseUsSection />
-        <AboutSection />
-        <ContactSection />
+        <CourseSection />
+        <FeatureSection />
+        <InstructorSection />
+        <TestimonialSection />
+        <CTASection />
       </main>
       <Footer />
     </div>
