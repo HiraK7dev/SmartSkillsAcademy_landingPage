@@ -2,10 +2,33 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Code, UserCheck, Briefcase, Award, BookOpen, Video, Users, Globe } from 'lucide-react';
 import AnimatedCard from './AnimatedCard';
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Checkbox } from "./ui/checkbox";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
+
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  message: z.string().min(5, {
+    message: "Message must be at least 5 characters.",
+  }),
+  acceptTerms: z.boolean().refine(val => val === true, {
+    message: "You must accept the terms and conditions.",
+  }),
+});
 
 const FeatureSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,6 +96,26 @@ const FeatureSection = () => {
     }
   ];
 
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      acceptTerms: false,
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+    setIsSubmitted(true);
+    form.reset();
+    
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
+  }
+
   return (
     <section id="features" className="section-padding" ref={sectionRef}>
       <div className="container-custom">
@@ -126,7 +169,7 @@ const FeatureSection = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-sm opacity-90">Pay monthly or get a discount with full payment</p>
+                  <p className="text-sm opacity-90">Hands-on projects with real-world applications</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="bg-white/20 rounded-full p-1 mt-0.5">
@@ -140,25 +183,91 @@ const FeatureSection = () => {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white">
-              <div className="mb-4">
-                <div className="text-sm opacity-80 mb-1">Regular Price</div>
-                <div className="flex items-end">
-                  <span className="text-2xl font-bold line-through opacity-70">$1,499</span>
-                  <span className="ml-2 text-sm opacity-70">USD</span>
+              {isSubmitted ? (
+                <div className="h-full flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold mb-2">Message Sent!</h4>
+                  <p className="opacity-90">Thank you for reaching out. We'll get back to you shortly.</p>
                 </div>
-              </div>
-              <div className="mb-6">
-                <div className="text-sm opacity-80 mb-1">Special Offer</div>
-                <div className="flex items-end">
-                  <span className="text-4xl font-bold">$999</span>
-                  <span className="ml-2 text-sm opacity-70">USD</span>
-                </div>
-                <div className="mt-1 inline-block px-2 py-1 bg-selectiveYellow text-resolutionBlue text-xs font-bold rounded">SAVE 33%</div>
-              </div>
-              <button className="w-full py-3 px-6 bg-white text-resolutionBlue font-bold rounded-lg hover:bg-white/90 transition-colors">
-                Enroll Now and Save
-              </button>
-              <p className="text-xs opacity-70 text-center mt-4">Limited time offer. First 100 students only.</p>
+              ) : (
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <h4 className="text-lg font-bold mb-4">Contact Us</h4>
+                    
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your name" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Email</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your email" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Message</FormLabel>
+                          <FormControl>
+                            <Textarea placeholder="Your message" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 min-h-24" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="acceptTerms"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              className="data-[state=checked]:bg-white data-[state=checked]:text-celestialBlue"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm text-white/80">
+                              I agree to the terms and privacy policy
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <button type="submit" className="w-full py-3 px-6 bg-white text-resolutionBlue font-bold rounded-lg hover:bg-white/90 transition-colors">
+                      Send Message
+                    </button>
+                  </form>
+                </Form>
+              )}
             </div>
           </div>
         </div>
