@@ -44,8 +44,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <a href="#" className="text-2xl font-bold text-resolutionBlue mb-4 inline-block">
-              Smart<span className="text-celestialBlue">Skills</span>Academy
+              Smart<span className="text-celestialBlue"> Skills </span>Academy
             </a>
+
             <p className="text-gray-600 mb-6 max-w-md">
               Empowering individuals to master modern tech skills through expert-led courses, hands-on projects, and personalized mentorship.
             </p>

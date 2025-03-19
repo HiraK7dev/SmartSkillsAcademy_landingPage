@@ -85,6 +85,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
+    <section id='contact'>
     <div className="w-full max-w-2xl mx-auto animate-fade-in" id="contactUs">
       <div className="glass-card rounded-2xl p-8 border border-muted/30 backdrop-blur-sm mb-8">
         <div className="text-center mb-8">
@@ -218,6 +219,7 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
+    </section>
   );
 };
 

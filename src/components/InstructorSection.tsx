@@ -51,11 +51,11 @@ const InstructorSection = () => {
     <section id="instructors" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-celestialBlue/10 text-celestialBlue rounded-full text-sm font-medium mb-5">
+          {/* <span className="inline-block px-4 py-1.5 bg-celestialBlue/10 text-celestialBlue rounded-full text-sm font-medium mb-5">
             Meet Our Team
-          </span>
+          </span> */}
           <h2 className="section-heading">
-            Learn From <span className="text-gradient-blue">Industry Experts</span>
+            Learn From <span className="text-gradient-blue">Experts</span>
           </h2>
           <p className="section-subheading">
             Our instructors bring years of real-world experience to provide you with practical, industry-relevant education.

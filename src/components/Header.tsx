@@ -23,7 +23,6 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '#' },
     { label: 'Features', href: '#features' },
-    { label: 'Testimonials', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -68,12 +67,11 @@ const Header = () => {
         )}
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
-            Sign In
-          </Button>
+          <a href='#contact'>
           <Button variant="primary" size="sm">
             Get Started
           </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
