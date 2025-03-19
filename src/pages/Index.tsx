@@ -7,6 +7,8 @@ import InstructorSection from '../components/InstructorSection';
 import TestimonialSection from '../components/TestimonialSection';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
+import ContactForm from '@/components/ContactForm';
+import CallToAction from '@/components/CallToAction';
 
 const Index = () => {
   useEffect(() => {
@@ -38,7 +40,9 @@ const Index = () => {
         <FeatureSection />
         <InstructorSection />
         <TestimonialSection />
-        <CTASection />
+        {/* <CTASection /> */}
+        <CallToAction/>
+        <ContactForm />
       </main>
       <Footer />
     </div>

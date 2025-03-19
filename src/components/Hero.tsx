@@ -84,18 +84,7 @@ const Hero = () => {
                 <Smartphone size={28} className="text-selectiveYellow" />
               </div>
               <h3 className="text-xl font-bold mb-2">Mobile App Development</h3>
-              <p className="text-gray-600">Learn to build native and cross-platform mobile applications for iOS and Android devices.</p>
-            </div>
-          </div>
-          
-          <div className="bg-white shadow-xl rounded-xl overflow-hidden flex-1 max-w-md transform transition-transform hover:scale-[1.02] duration-500">
-            <div className="h-2 bg-celestialBlue"></div>
-            <div className="p-6">
-              <div className="w-12 h-12 bg-celestialBlue/10 rounded-lg flex items-center justify-center mb-4">
-                <Zap size={28} className="text-celestialBlue" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
-              <p className="text-gray-600">Design beautiful, intuitive interfaces that provide exceptional user experiences.</p>
+              <p className="text-gray-600">Learn to build cross-platform mobile applications for iOS and Android devices.</p>
             </div>
           </div>
         </div>

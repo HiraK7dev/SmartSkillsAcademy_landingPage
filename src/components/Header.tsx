@@ -22,8 +22,6 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Courses', href: '#courses' },
     { label: 'Features', href: '#features' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },
@@ -48,8 +46,9 @@ const Header = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
+        <img src="logo.png" alt="Logo" className="w-20" />
           <a href="#" className="text-2xl font-bold text-resolutionBlue">
-            Smart<span className="text-celestialBlue">Skills</span>Academy
+            Smart <span className="text-celestialBlue">Skills </span>Academy
           </a>
         </div>
 

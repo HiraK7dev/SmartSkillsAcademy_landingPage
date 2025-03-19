@@ -60,16 +60,6 @@ const FeatureSection = () => {
       description: "Apply your knowledge to real-world projects that enhance your portfolio and prepare you for industry challenges."
     },
     {
-      icon: <UserCheck size={24} className="text-celestialBlue" />,
-      title: "Experienced Mentors",
-      description: "Learn from industry experts with years of professional experience at top tech companies."
-    },
-    {
-      icon: <Briefcase size={24} className="text-celestialBlue" />,
-      title: "Career Guidance",
-      description: "Receive personalized career advice, resume reviews, and interview preparation to land your dream job."
-    },
-    {
       icon: <Award size={24} className="text-celestialBlue" />,
       title: "Industry Certification",
       description: "Earn recognized certifications that validate your skills to potential employers."
@@ -84,16 +74,6 @@ const FeatureSection = () => {
       title: "Interactive Learning",
       description: "Engage with interactive lessons, coding challenges, and hands-on workshops for practical experience."
     },
-    {
-      icon: <Users size={24} className="text-celestialBlue" />,
-      title: "Community Support",
-      description: "Join our active community of learners for networking, collaboration, and peer-to-peer learning."
-    },
-    {
-      icon: <Globe size={24} className="text-celestialBlue" />,
-      title: "Lifetime Access",
-      description: "Get lifetime access to course materials and free updates as technologies evolve and change."
-    }
   ];
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -181,94 +161,7 @@ const FeatureSection = () => {
                 </div>
               </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white">
-              {isSubmitted ? (
-                <div className="h-full flex flex-col items-center justify-center text-center">
-                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold mb-2">Message Sent!</h4>
-                  <p className="opacity-90">Thank you for reaching out. We'll get back to you shortly.</p>
-                </div>
-              ) : (
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <h4 className="text-lg font-bold mb-4">Contact Us</h4>
-                    
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your name" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Email</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your email" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Message</FormLabel>
-                          <FormControl>
-                            <Textarea placeholder="Your message" {...field} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 min-h-24" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="acceptTerms"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                          <FormControl>
-                            <Checkbox
-                              checked={field.value}
-                              onCheckedChange={field.onChange}
-                              className="data-[state=checked]:bg-white data-[state=checked]:text-celestialBlue"
-                            />
-                          </FormControl>
-                          <div className="space-y-1 leading-none">
-                            <FormLabel className="text-sm text-white/80">
-                              I agree to the terms and privacy policy
-                            </FormLabel>
-                            <FormMessage />
-                          </div>
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <button type="submit" className="w-full py-3 px-6 bg-white text-resolutionBlue font-bold rounded-lg hover:bg-white/90 transition-colors">
-                      Send Message
-                    </button>
-                  </form>
-                </Form>
-              )}
-            </div>
+            
           </div>
         </div>
       </div>
