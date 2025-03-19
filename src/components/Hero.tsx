@@ -99,21 +99,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        <div 
-          className={`mt-16 text-center transition-all duration-700 delay-600 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <p className="text-sm text-gray-500 mb-3">TRUSTED BY PROFESSIONALS FROM</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Google" alt="Google" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Microsoft" alt="Microsoft" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Amazon" alt="Amazon" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Facebook" alt="Facebook" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="https://placehold.co/120x40/13247E/FFFFFF?text=Apple" alt="Apple" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-          </div>
-        </div>
       </div>
     </section>
   );
