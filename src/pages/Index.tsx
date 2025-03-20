@@ -33,7 +33,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-white text-gray-800 overflow-x-hidden">
       <Header />
       <main>
         <Hero />

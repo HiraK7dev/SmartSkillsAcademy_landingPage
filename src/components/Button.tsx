@@ -19,18 +19,18 @@ const Button = ({
   onClick,
   type = "button"
 }: ButtonProps) => {
-  const baseClasses = "rounded-lg font-medium transition-all duration-300 ease-in-out transform active:scale-[0.98] flex items-center justify-center";
+  const baseClasses = "rounded font-medium transition-all duration-300 ease-in-out transform active:scale-[0.98] flex items-center justify-center";
   
   const variantClasses = {
-    primary: "bg-celestialBlue hover:bg-celestialBlue/90 text-white shadow-md hover:shadow-lg",
-    secondary: "bg-selectiveYellow hover:bg-selectiveYellow/90 text-resolutionBlue shadow-md hover:shadow-lg",
-    outline: "bg-transparent border-2 border-celestialBlue text-celestialBlue hover:bg-celestialBlue/5"
+    primary: "bg-orange-500 hover:bg-orange-600 text-white shadow-sm",
+    secondary: "bg-blue-600 hover:bg-blue-700 text-white shadow-sm",
+    outline: "bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-gray-800/5"
   };
   
   const sizeClasses = {
     sm: "text-sm py-2 px-4",
-    md: "text-base py-3 px-6",
-    lg: "text-lg py-4 px-8"
+    md: "text-base py-2.5 px-5",
+    lg: "text-lg py-3 px-6"
   };
   
   return (

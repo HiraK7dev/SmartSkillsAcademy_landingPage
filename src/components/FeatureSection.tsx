@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Code, UserCheck, Briefcase, Award, BookOpen, Video, Users, Globe } from 'lucide-react';
+import { Code, Award, BookOpen, Video } from 'lucide-react';
 import AnimatedCard from './AnimatedCard';
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -55,22 +55,22 @@ const FeatureSection = () => {
 
   const features = [
     {
-      icon: <Code size={24} className="text-[#004E89]" />,
+      icon: <Code size={24} className="text-blue-600" />,
       title: "Real-World Projects",
       description: "Apply your knowledge to real-world projects that enhance your portfolio and prepare you for industry challenges."
     },
     {
-      icon: <Award size={24} className="text-[#004E89]" />,
+      icon: <Award size={24} className="text-blue-600" />,
       title: "Industry Certification",
       description: "Earn recognized certifications that validate your skills to potential employers."
     },
     {
-      icon: <BookOpen size={24} className="text-[#004E89]" />,
+      icon: <BookOpen size={24} className="text-blue-600" />,
       title: "Comprehensive Resources",
       description: "Access a vast library of learning materials, code samples, and additional resources to support your learning."
     },
     {
-      icon: <Video size={24} className="text-[#004E89]" />,
+      icon: <Video size={24} className="text-blue-600" />,
       title: "Interactive Learning",
       description: "Engage with interactive lessons, coding challenges, and hands-on workshops for practical experience."
     },
@@ -97,16 +97,15 @@ const FeatureSection = () => {
   }
 
   return (
-    <section id="features" className="section-padding bg-[#f9f9f9]" ref={sectionRef}>
+    <section id="features" className="py-16 bg-gray-50" ref={sectionRef}>
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-[#004E89]/10 text-[#004E89] rounded-full text-sm font-medium mb-5">
-            Why Choose Us
-          </span>
-          <h2 className="section-heading">
-            Features That <span className="bg-gradient-to-r from-[#004E89] to-[#FF6B35] bg-clip-text text-transparent">Set Us Apart</span>
+        <div className="text-center mb-12">
+          <h5 className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-2">Why Choose Us</h5>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Features That Set Us Apart
           </h2>
-          <p className="section-subheading">
+          <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
             Our platform offers unique advantages designed to ensure your success in today's competitive tech landscape.
           </p>
         </div>
@@ -115,21 +114,21 @@ const FeatureSection = () => {
           {features.map((feature, index) => (
             <AnimatedCard 
               key={index} 
-              className="h-full bg-white border border-gray-100"
+              className="h-full bg-white shadow-sm border border-gray-200 rounded-lg"
               delay={index * 100}
             >
-              <div className="w-12 h-12 mb-4 bg-[#004E89]/10 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 mb-4 bg-blue-50 rounded-lg flex items-center justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-lg font-bold mb-2 text-gray-800">{feature.title}</h3>
+              <p className="text-gray-600 text-sm">{feature.description}</p>
             </AnimatedCard>
           ))}
         </div>
 
-        <div className={`mt-20 bg-gradient-to-r from-[#004E89] to-[#0076CE] rounded-2xl overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-            <div className="text-white">
+        <div className="mt-20 bg-white rounded-lg shadow-lg overflow-hidden transition-opacity duration-1000 border border-gray-200 ${isVisible ? 'opacity-100' : 'opacity-0'}">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="bg-blue-600 text-white p-8 md:p-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Career?</h3>
               <p className="mb-8 opacity-90">
                 Join thousands of students who have accelerated their careers with our practical, job-focused tech training programs.
@@ -162,7 +161,7 @@ const FeatureSection = () => {
               </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="bg-white p-8 md:p-10">
               {isSubmitted ? (
                 <div className="text-center py-8">
                   <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -176,19 +175,19 @@ const FeatureSection = () => {
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <h4 className="text-xl font-bold text-[#004E89] mb-4">Contact Us</h4>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">Contact Us</h4>
                     
                     <FormField
                       control={form.control}
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Name</FormLabel>
+                          <FormLabel className="text-gray-700">Your Name</FormLabel>
                           <FormControl>
                             <Input 
                               placeholder="John Doe" 
                               {...field} 
-                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20" 
+                              className="border-gray-300 focus:ring-blue-600 focus:border-blue-600" 
                             />
                           </FormControl>
                           <FormMessage />
@@ -201,13 +200,13 @@ const FeatureSection = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email Address</FormLabel>
+                          <FormLabel className="text-gray-700">Email Address</FormLabel>
                           <FormControl>
                             <Input 
                               placeholder="john@example.com" 
                               type="email" 
                               {...field} 
-                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20" 
+                              className="border-gray-300 focus:ring-blue-600 focus:border-blue-600" 
                             />
                           </FormControl>
                           <FormMessage />
@@ -220,12 +219,12 @@ const FeatureSection = () => {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel className="text-gray-700">Message</FormLabel>
                           <FormControl>
                             <Textarea 
                               placeholder="How can we help you?" 
                               {...field} 
-                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20 min-h-[100px]" 
+                              className="border-gray-300 focus:ring-blue-600 focus:border-blue-600 min-h-[100px]" 
                             />
                           </FormControl>
                           <FormMessage />
@@ -242,12 +241,12 @@ const FeatureSection = () => {
                             <Checkbox 
                               checked={field.value} 
                               onCheckedChange={field.onChange} 
-                              className="data-[state=checked]:bg-[#004E89] data-[state=checked]:border-[#004E89]" 
+                              className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" 
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
-                            <FormLabel className="text-sm font-normal">
-                              I accept the <a href="#" className="text-[#004E89] hover:underline">terms and conditions</a>
+                            <FormLabel className="text-sm font-normal text-gray-700">
+                              I accept the <a href="#" className="text-blue-600 hover:underline">terms and conditions</a>
                             </FormLabel>
                             <FormMessage />
                           </div>
@@ -257,7 +256,7 @@ const FeatureSection = () => {
                     
                     <button 
                       type="submit" 
-                      className="w-full bg-[#004E89] hover:bg-[#004E89]/90 text-white font-medium py-2.5 px-4 rounded-lg transition-colors"
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 px-4 rounded transition-colors"
                     >
                       Send Message
                     </button>

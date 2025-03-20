@@ -39,26 +39,26 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-lg shadow-sm' 
+          ? 'bg-white shadow-sm' 
           : 'bg-transparent'
       )}
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <img src="logo.png" alt="Logo" className="w-20" />
-          <a href="#" className="text-2xl font-bold text-[#004E89]">
-            Smart <span className="text-[#FF6B35]">Skills </span>Academy
+          <img src="logo.png" alt="Logo" className="w-16" />
+          <a href="#" className="text-xl font-bold text-gray-800 ml-2">
+            Smart <span className="text-orange-500">Skills </span>Academy
           </a>
         </div>
 
         {/* Desktop Navigation */}
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-[#FF6B35] transition-colors font-medium"
+                className="text-gray-700 hover:text-orange-500 transition-colors text-sm font-semibold uppercase"
               >
                 {item.label}
               </a>
@@ -66,9 +66,9 @@ const Header = () => {
           </nav>
         )}
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center">
           <a href='#contact'>
-            <Button variant="primary" size="sm" className="bg-[#004E89] hover:bg-[#004E89]/90">
+            <Button variant="primary" size="sm" className="bg-orange-500 hover:bg-orange-600 rounded text-sm font-medium">
               Get Started
             </Button>
           </a>
@@ -97,15 +97,15 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xl font-medium text-gray-800 hover:text-[#FF6B35]"
+                className="text-xl font-medium text-gray-800 hover:text-orange-500"
                 onClick={closeMenu}
               >
                 {item.label}
               </a>
             ))}
             <div className="flex flex-col space-y-4 pt-6">
-              <Button variant="outline" className="border-[#004E89] text-[#004E89]">Sign In</Button>
-              <Button className="bg-[#004E89]">Get Started</Button>
+              <Button variant="outline" className="border-gray-800 text-gray-800">Sign In</Button>
+              <Button className="bg-orange-500 hover:bg-orange-600">Get Started</Button>
             </div>
           </nav>
         </div>

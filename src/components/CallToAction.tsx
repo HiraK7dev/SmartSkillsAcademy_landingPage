@@ -1,75 +1,61 @@
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { useEffect } from "react";
-
-const benefits = [
-  "Hands-on project-based learning",
-  "Access to mobile testing devices",
-  "Access to exclusive developer community",
-  "Certificate of completion"
-];
+import React from 'react';
+import Button from './Button';
+import { ArrowRight } from 'lucide-react';
 
 const CallToAction = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = document.querySelectorAll(".animate-on-scroll");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
-    <section className="py-24 px-6 md:px-10 relative overflow-hidden bg-white">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-[#004E89]/5 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#FF6B35]/5 rounded-full blur-3xl -z-10"></div>
-      <div className="max-w-7xl mx-auto">
-        
-        <div className="mt-24 text-center space-y-8 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Frequently Asked Questions
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-[#004E89]/30 transition-colors">
-              <h3 className="text-xl font-semibold mb-3 text-[#004E89]">Do I need prior coding experience?</h3>
-              <p className="text-foreground/70">
-                Basic JavaScript knowledge is recommended, but our curriculum includes refresher modules to help beginners get up to speed.
+    <section className="relative bg-gray-50 py-20" id="contact">
+      <div className="container-custom">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="grid md:grid-cols-5">
+            <div className="md:col-span-3 p-8 md:p-12 bg-blue-600 text-white">
+              <h2 className="text-3xl font-bold mb-4">Ready to Advance Your Tech Career?</h2>
+              <p className="text-white/90 mb-6">
+                Join our platform today and gain access to expert-led courses, hands-on projects, and a supportive community that will help you achieve your career goals.
               </p>
+              <ul className="space-y-2 mb-8">
+                <li className="flex items-center">
+                  <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-white/90 text-sm">Flexible learning paths for every skill level</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-white/90 text-sm">Live mentorship from industry professionals</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-white/90 text-sm">Career guidance and placement opportunities</span>
+                </li>
+              </ul>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                Get Started Today <ArrowRight size={16} className="ml-2" />
+              </Button>
             </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-[#004E89]/30 transition-colors">
-              <h3 className="text-xl font-semibold mb-3 text-[#004E89]">What is the time commitment?</h3>
-              <p className="text-foreground/70">
-                Students should expect to dedicate at least 20-25 hours per week to classes, projects, and self-study for optimal learning outcomes.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-[#004E89]/30 transition-colors">
-              <h3 className="text-xl font-semibold mb-3 text-[#004E89]">What kind of support will I receive?</h3>
-              <p className="text-foreground/70">
-                Students receive mentorship from experienced mobile developers, code reviews, career coaching, and lifetime access to our alumni network.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-[#004E89]/30 transition-colors">
-              <h3 className="text-xl font-semibold mb-3 text-[#004E89]">Do I need a Mac for development?</h3>
-              <p className="text-foreground/70">
-                While a Mac is required for iOS development, Android development can be done on Windows, Mac, or Linux. Our course focuses primarily on Android with React Native.
-              </p>
+            <div className="md:col-span-2 bg-blue-700 p-8 md:p-12 flex items-center justify-center">
+              <div className="text-center">
+                <div className="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">15,000+</h3>
+                <p className="text-white/80 text-sm">Students already enrolled</p>
+                <div className="w-16 h-1 bg-orange-500 mx-auto my-4"></div>
+                <p className="text-white/80 text-sm">Join our growing community of tech professionals</p>
+              </div>
             </div>
           </div>
         </div>
