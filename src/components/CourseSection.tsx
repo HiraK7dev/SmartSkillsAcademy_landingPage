@@ -121,49 +121,51 @@ const CourseSection = () => {
   }, [activeTab]);
 
   return (
-    <section id="courses" className="section-padding bg-gray-50">
+    <section id="courses" className="section-padding bg-gray-50 web-veda-bg-pattern">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 bg-celestialBlue/10 text-celestialBlue rounded-full text-sm font-medium mb-5">
-            Our Course Catalog
+          <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-5">
+            Featured Courses
           </span>
-          <h2 className="section-heading">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Discover Our <span className="text-gradient-blue">Premium Courses</span>
           </h2>
-          <p className="section-subheading">
+          <div className="web-veda-divider mx-auto"></div>
+          <p className="text-gray-600 max-w-3xl mx-auto mt-6">
             Industry-relevant courses designed by experts to help you master the skills employers are looking for.
+            Start your journey today and transform your career.
           </p>
         </div>
 
         <div className="flex justify-center mb-10 overflow-x-auto">
-          <div className="inline-flex p-1 bg-gray-100 rounded-lg">
+          <div className="inline-flex p-1 bg-white rounded-lg shadow-sm">
             <button
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                activeTab === 'all' ? 'bg-white shadow-sm text-resolutionBlue' : 'text-gray-600'
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'all' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'
               }`}
               onClick={() => setActiveTab('all')}
             >
               All Courses
             </button>
             <button
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                activeTab === 'web' ? 'bg-white shadow-sm text-resolutionBlue' : 'text-gray-600'
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'web' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'
               }`}
               onClick={() => setActiveTab('web')}
             >
               Web Development
             </button>
             <button
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                activeTab === 'mobile' ? 'bg-white shadow-sm text-resolutionBlue' : 'text-gray-600'
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'mobile' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'
               }`}
               onClick={() => setActiveTab('mobile')}
             >
               Mobile Development
             </button>
             <button
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all ${
-                activeTab === 'design' ? 'bg-white shadow-sm text-resolutionBlue' : 'text-gray-600'
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'design' ? 'bg-blue-600 text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'
               }`}
               onClick={() => setActiveTab('design')}
             >
@@ -194,9 +196,9 @@ const CourseSection = () => {
             <Button 
               variant="outline" 
               onClick={showMoreCourses} 
-              className="mx-auto hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-selectiveYellow/10"
+              className="mx-auto border-blue-600 text-blue-600 hover:bg-blue-50"
             >
-              Load More Courses <ArrowRight size={16} className="ml-2" />
+              View More Courses <ArrowRight size={16} className="ml-2" />
             </Button>
           </div>
         )}

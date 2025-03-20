@@ -19,12 +19,12 @@ const Button = ({
   onClick,
   type = "button"
 }: ButtonProps) => {
-  const baseClasses = "rounded font-medium transition-all duration-300 ease-in-out transform active:scale-[0.98] flex items-center justify-center";
+  const baseClasses = "rounded-lg font-medium transition-all duration-300 ease-in-out transform active:scale-[0.98] flex items-center justify-center";
   
   const variantClasses = {
-    primary: "bg-orange-500 hover:bg-orange-600 text-white shadow-sm",
-    secondary: "bg-blue-600 hover:bg-blue-700 text-white shadow-sm",
-    outline: "bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-gray-800/5"
+    primary: "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-sm hover:shadow",
+    secondary: "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-sm hover:shadow",
+    outline: "bg-transparent border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600"
   };
   
   const sizeClasses = {
