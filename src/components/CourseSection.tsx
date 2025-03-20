@@ -184,13 +184,18 @@ const CourseSection = () => {
               studentsCount={course.studentsCount}
               price={course.price}
               isPremium={course.isPremium}
+              category={course.category}
             />
           ))}
         </div>
 
         {visibleCourses < filteredCourses.length && (
           <div className="text-center mt-12">
-            <Button variant="outline" onClick={showMoreCourses} className="mx-auto">
+            <Button 
+              variant="outline" 
+              onClick={showMoreCourses} 
+              className="mx-auto hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-selectiveYellow/10"
+            >
               Load More Courses <ArrowRight size={16} className="ml-2" />
             </Button>
           </div>

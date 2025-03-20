@@ -9,6 +9,7 @@ import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 import ContactForm from '@/components/ContactForm';
 import CallToAction from '@/components/CallToAction';
+import CourseSection from '@/components/CourseSection';
 
 const Index = () => {
   useEffect(() => {
@@ -37,6 +38,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <CourseSection />
         <FeatureSection />
         {/* <InstructorSection /> */}
         {/* <TestimonialSection /> */}
