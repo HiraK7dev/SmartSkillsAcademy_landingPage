@@ -55,22 +55,22 @@ const FeatureSection = () => {
 
   const features = [
     {
-      icon: <Code size={24} className="text-celestialBlue" />,
+      icon: <Code size={24} className="text-[#004E89]" />,
       title: "Real-World Projects",
       description: "Apply your knowledge to real-world projects that enhance your portfolio and prepare you for industry challenges."
     },
     {
-      icon: <Award size={24} className="text-celestialBlue" />,
+      icon: <Award size={24} className="text-[#004E89]" />,
       title: "Industry Certification",
       description: "Earn recognized certifications that validate your skills to potential employers."
     },
     {
-      icon: <BookOpen size={24} className="text-celestialBlue" />,
+      icon: <BookOpen size={24} className="text-[#004E89]" />,
       title: "Comprehensive Resources",
       description: "Access a vast library of learning materials, code samples, and additional resources to support your learning."
     },
     {
-      icon: <Video size={24} className="text-celestialBlue" />,
+      icon: <Video size={24} className="text-[#004E89]" />,
       title: "Interactive Learning",
       description: "Engage with interactive lessons, coding challenges, and hands-on workshops for practical experience."
     },
@@ -97,14 +97,14 @@ const FeatureSection = () => {
   }
 
   return (
-    <section id="features" className="section-padding" ref={sectionRef}>
+    <section id="features" className="section-padding bg-[#f9f9f9]" ref={sectionRef}>
       <div className="container-custom">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-celestialBlue/10 text-celestialBlue rounded-full text-sm font-medium mb-5">
+          <span className="inline-block px-4 py-1.5 bg-[#004E89]/10 text-[#004E89] rounded-full text-sm font-medium mb-5">
             Why Choose Us
           </span>
           <h2 className="section-heading">
-            Features That <span className="text-gradient-blue">Set Us Apart</span>
+            Features That <span className="bg-gradient-to-r from-[#004E89] to-[#FF6B35] bg-clip-text text-transparent">Set Us Apart</span>
           </h2>
           <p className="section-subheading">
             Our platform offers unique advantages designed to ensure your success in today's competitive tech landscape.
@@ -115,10 +115,10 @@ const FeatureSection = () => {
           {features.map((feature, index) => (
             <AnimatedCard 
               key={index} 
-              className="h-full"
+              className="h-full bg-white border border-gray-100"
               delay={index * 100}
             >
-              <div className="w-12 h-12 mb-4 bg-celestialBlue/10 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 mb-4 bg-[#004E89]/10 rounded-lg flex items-center justify-center">
                 {feature.icon}
               </div>
               <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
@@ -127,7 +127,7 @@ const FeatureSection = () => {
           ))}
         </div>
 
-        <div className={`mt-20 bg-gradient-to-r from-resolutionBlue to-celestialBlue rounded-2xl overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`mt-20 bg-gradient-to-r from-[#004E89] to-[#0076CE] rounded-2xl overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
             <div className="text-white">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Career?</h3>
@@ -162,6 +162,109 @@ const FeatureSection = () => {
               </div>
             </div>
             
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Thank You!</h4>
+                  <p className="text-gray-600">Your message has been sent successfully. We'll be in touch soon.</p>
+                </div>
+              ) : (
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <h4 className="text-xl font-bold text-[#004E89] mb-4">Contact Us</h4>
+                    
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Your Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="John Doe" 
+                              {...field} 
+                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="john@example.com" 
+                              type="email" 
+                              {...field} 
+                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder="How can we help you?" 
+                              {...field} 
+                              className="border-gray-300 focus:border-[#004E89] focus:ring-[#004E89]/20 min-h-[100px]" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="acceptTerms"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox 
+                              checked={field.value} 
+                              onCheckedChange={field.onChange} 
+                              className="data-[state=checked]:bg-[#004E89] data-[state=checked]:border-[#004E89]" 
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm font-normal">
+                              I accept the <a href="#" className="text-[#004E89] hover:underline">terms and conditions</a>
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <button 
+                      type="submit" 
+                      className="w-full bg-[#004E89] hover:bg-[#004E89]/90 text-white font-medium py-2.5 px-4 rounded-lg transition-colors"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </Form>
+              )}
+            </div>
           </div>
         </div>
       </div>

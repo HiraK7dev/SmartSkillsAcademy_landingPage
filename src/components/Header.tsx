@@ -39,15 +39,15 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-lg shadow-sm' 
+          ? 'bg-white/95 backdrop-blur-lg shadow-sm' 
           : 'bg-transparent'
       )}
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-        <img src="logo.png" alt="Logo" className="w-20" />
-          <a href="#" className="text-2xl font-bold text-resolutionBlue">
-            Smart <span className="text-celestialBlue">Skills </span>Academy
+          <img src="logo.png" alt="Logo" className="w-20" />
+          <a href="#" className="text-2xl font-bold text-[#004E89]">
+            Smart <span className="text-[#FF6B35]">Skills </span>Academy
           </a>
         </div>
 
@@ -58,7 +58,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-celestialBlue transition-colors font-medium"
+                className="text-gray-700 hover:text-[#FF6B35] transition-colors font-medium"
               >
                 {item.label}
               </a>
@@ -68,9 +68,9 @@ const Header = () => {
 
         <div className="hidden md:flex items-center space-x-4">
           <a href='#contact'>
-          <Button variant="primary" size="sm">
-            Get Started
-          </Button>
+            <Button variant="primary" size="sm" className="bg-[#004E89] hover:bg-[#004E89]/90">
+              Get Started
+            </Button>
           </a>
         </div>
 
@@ -97,15 +97,15 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xl font-medium text-gray-800 hover:text-celestialBlue"
+                className="text-xl font-medium text-gray-800 hover:text-[#FF6B35]"
                 onClick={closeMenu}
               >
                 {item.label}
               </a>
             ))}
             <div className="flex flex-col space-y-4 pt-6">
-              <Button variant="outline">Sign In</Button>
-              <Button>Get Started</Button>
+              <Button variant="outline" className="border-[#004E89] text-[#004E89]">Sign In</Button>
+              <Button className="bg-[#004E89]">Get Started</Button>
             </div>
           </nav>
         </div>

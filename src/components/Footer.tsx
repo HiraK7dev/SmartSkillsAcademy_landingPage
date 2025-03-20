@@ -39,28 +39,28 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-50 pt-16 pb-8">
+    <footer className="bg-[#f9f9f9] pt-16 pb-8 border-t border-gray-200">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
-            <a href="#" className="text-2xl font-bold text-resolutionBlue mb-4 inline-block">
-              Smart<span className="text-celestialBlue"> Skills </span>Academy
+            <a href="#" className="text-2xl font-bold text-[#004E89] mb-4 inline-block">
+              Smart<span className="text-[#FF6B35]"> Skills </span>Academy
             </a>
 
             <p className="text-gray-600 mb-6 max-w-md">
               Empowering individuals to master modern tech skills through expert-led courses, hands-on projects, and personalized mentorship.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-celestialBlue hover:text-white transition-colors" aria-label="Twitter">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#004E89] hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-celestialBlue hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#004E89] hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-celestialBlue hover:text-white transition-colors" aria-label="YouTube">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#004E89] hover:text-white transition-colors" aria-label="YouTube">
                 <Youtube size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-celestialBlue hover:text-white transition-colors" aria-label="Instagram">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#004E89] hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                   <li key={i}>
                     <a 
                       href={link.href} 
-                      className="text-gray-600 hover:text-celestialBlue transition-colors inline-flex items-center group"
+                      className="text-gray-600 hover:text-[#FF6B35] transition-colors inline-flex items-center group"
                     >
                       {link.label}
                       <ArrowUpRight 
@@ -94,24 +94,24 @@ const Footer = () => {
             © {currentYear} SmartSkills Academy. All rights reserved.
           </div>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-            <a href="#" className="hover:text-celestialBlue transition-colors">
+            <a href="#" className="hover:text-[#FF6B35] transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-celestialBlue transition-colors">
+            <a href="#" className="hover:text-[#FF6B35] transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-celestialBlue transition-colors">
+            <a href="#" className="hover:text-[#FF6B35] transition-colors">
               Cookie Policy
             </a>
             <div className="flex items-center">
-              <Mail size={16} className="mr-2 text-celestialBlue" />
-              <a href="mailto:contact@smartskills.academy" className="hover:text-celestialBlue transition-colors">
+              <Mail size={16} className="mr-2 text-[#004E89]" />
+              <a href="mailto:contact@smartskills.academy" className="hover:text-[#FF6B35] transition-colors">
                 contact@smartskills.academy
               </a>
             </div>
             <div className="flex items-center">
-              <Phone size={16} className="mr-2 text-celestialBlue" />
-              <a href="tel:+1234567890" className="hover:text-celestialBlue transition-colors">
+              <Phone size={16} className="mr-2 text-[#004E89]" />
+              <a href="tel:+1234567890" className="hover:text-[#FF6B35] transition-colors">
                 (123) 456-7890
               </a>
             </div>
